@@ -5,7 +5,7 @@ from time import sleep
 from keep_alive import keep_alive
 keep_alive()
 
-TOKEN = file.read(environ.get('token'))
+TOKEN = environ.get('token')
 
 intents = discord.Intents.default()
 
