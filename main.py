@@ -1,10 +1,11 @@
 import discord
-from datetime import datetime
+from os import environ
 from discord.ext import commands
 from time import sleep
+from keep_alive import keep_alive
+keep_alive()
 
-with open("discord_token", "r") as file:
-    TOKEN = file.read()
+TOKEN = file.read(environ.get('token'))
 
 intents = discord.Intents.default()
 
